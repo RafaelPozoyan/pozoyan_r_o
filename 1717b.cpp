@@ -18,7 +18,7 @@ int main() {
                 }
             
             }
-            std::cout << endl;
+            std::cout << std::endl;
         }
         T -= 1;
     }
