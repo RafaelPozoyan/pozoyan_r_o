@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <string>
 
 
@@ -15,12 +14,13 @@ int main() {
 		for (int j = 0; j <= n; j += 1) {
 			//while (j < n){
 			std::cin >> a;
-			if (a[j + 1] == a[j] == 1) {
+			if (j >= n) {
+				break;
+			}
+			if (a[j - 1] == a[j] == 1) {
 				dlina += 5;
-				if (j >= n) {
-					break;
 				}
-				if (a[j + 1] != a[j] && a[j + 1] == 1) {
+				if (a[j - 1] != a[j] && a[j - 1] == 1) {
 					dlina += 1;
 
 				}
@@ -28,9 +28,8 @@ int main() {
 					dlina += 0;
 				}
 			}
-			}
-
 		std::cout << dlina;
+			}
 		}
-	}
+	
 	
