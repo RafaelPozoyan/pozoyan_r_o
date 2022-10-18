@@ -1,35 +1,32 @@
 #include <iostream>
-#include <string>
-
 
 int main() {
-	int t = 0;
-	std::cin >> t;
-	for (int i = 0; i < t; i += 1) {
-		int dlina = 0;
-		int n = 0;
-		std::cin >> n;
-		std::string a;
-		int cnt = 0;
-		for (int j = 0; j <= n; j += 1) {
-			//while (j < n){
-			std::cin >> a;
-			if (j >= n) {
-				break;
-			}
-			if (a[j - 1] == a[j] == 1) {
-				dlina += 5;
-				}
-				if (a[j - 1] != a[j] && a[j - 1] == 1) {
-					dlina += 1;
+    int t = 0; //количество наборов входных данных
+    std::cin >> t;
+    int n = 0; //количество поливов
+    for (int i = 0; i < t; i += 1){
+        std::cin >> n;
+        int high = 1; //высота цветка(ответ)
+        int previous = 69; //предыдущий полив
+        for (int j = 0; j < n; j += 1){
+            int a = 0; //полив
+            std::cin >> a;
+            if (a == 0 && a == previous) {
+                high = -2;
+                break;
+            }
+            if (a == 1 && a != previous) {
+                high += 1;
+            }
+            if (a == 1 && a == previous) {
+                high += 5;
+            }
+            else{
+                high += 0;
+            }
+            previous = a;
+        }
+        std::cout << high << std::endl;
+    }
+}
 
-				}
-				else {
-					dlina += 0;
-				}
-			}
-		std::cout << dlina;
-			}
-		}
-	
-	
