@@ -8,7 +8,7 @@ struct Rdec2D {
 
 //------------------------------------------
 //============================================================= ОПРЕДЕЛЕНИЕ ФУНКЦИИ
-std::ostream& operator  << (std::ostream& ostrm, const Rdec2D& z) {
+std::ostream& operator  << (std::ostream& ostrm, const Rdec2D& z) { /*оператор вывода*/
 	return ostrm << "(" << z.x << "," << z.y << ")";
 }
 
@@ -25,14 +25,14 @@ Rdec2D operator+(const Rdec2D& fst, const Rdec2D& scd) {
 }
 //============================================================= ОПРЕДЕЛЕНИЕ ФУНКЦИИ
 //-----------------------------------------
-// 
-// 
+ 
+
 //-----------------------------------------
 //============================================================= ФУНКЦИИ
-double skalyar_proizv(const Rdec2D& fst, const Rdec2D& scd) { /*скалярное произведение векторов*/
+double skalar_product(const Rdec2D& fst, const Rdec2D& scd) { /*скалярное произведение векторов*/
 	return { fst.x * scd.x + fst.y * scd.y };
 }
-double dlina_vectora(const Rdec2D& fst) { /*длина вектора*/
+double vector_length(const Rdec2D& fst) { /*длина вектора*/
 	return { sqrt(pow(fst.x, 2) + pow(fst.y, 2)) };
 }
 //============================================================= ФУНКЦИИ
@@ -40,15 +40,23 @@ double dlina_vectora(const Rdec2D& fst) { /*длина вектора*/
 
 
 int main() {
-	Rdec2D z1{ 0.0, 0.0 };
+	Rdec2D z1{ 2.0, 6.0 };
 	Rdec2D z2{ 4.0, 3.0 };
-	int a = 2;
-	std::cout << "skalyarnoe proizvedenie = " << skalyar_proizv(z1, z2) << ";" << '\n';
+	int a = 0;
+	std::cout << "enter a number:";
+	std::cin >> a;
 	std::cout << "------------------------------------------------------------" << '\n';
-	std::cout << "dlina vectora = " << dlina_vectora(z1) << ";" << '\n';
+	std::cout << "vector z1:" << z1 << '\n';
+	std::cout << "vector z2:" << z2 << '\n';
 	std::cout << "------------------------------------------------------------" << '\n';
-	std::cout << "proizvedenie na chislo : z1 * a = " << z1 * a << ";" << '\n';
-
+	std::cout << "scalar product = " << skalar_product(z1, z2) << ";" << '\n';
+	std::cout << "------------------------------------------------------------" << '\n';
+	std::cout << "vector z1 length = " << vector_length(z1) << ";" << '\n';
+	std::cout << "vector z2 length = " << vector_length(z2) << ";" << '\n';
+	std::cout << "------------------------------------------------------------" << '\n';
+	std::cout << "multiplication by number: z1 * a = " << z1 * a << ";" << '\n';
+	std::cout << "multiplication by number: z2 * a = " << z2 * a << ";" << '\n';
+	std::cout << "============================================================" << '\n';
 }
 
 
