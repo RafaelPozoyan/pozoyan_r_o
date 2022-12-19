@@ -1,0 +1,6 @@
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/CMakeFiles/geom.test.dir
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/CMakeFiles/edit_cache.dir
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/geom/CMakeFiles/geom.dir
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/geom/CMakeFiles/edit_cache.dir
+C:/Users/pozoy/source/repos/CMakeProject2lib/out/build/x64-debug/geom/CMakeFiles/rebuild_cache.dir
