@@ -1,4 +1,0 @@
-C:/Users/pozoy/source/repos/CMakeProject2/out/build/x64-debug/CMakeFiles/CMAkeProject2.dir
-C:/Users/pozoy/source/repos/CMakeProject2/out/build/x64-debug/CMakeFiles/CMAkeProject2.test.dir
-C:/Users/pozoy/source/repos/CMakeProject2/out/build/x64-debug/CMakeFiles/edit_cache.dir
-C:/Users/pozoy/source/repos/CMakeProject2/out/build/x64-debug/CMakeFiles/rebuild_cache.dir
