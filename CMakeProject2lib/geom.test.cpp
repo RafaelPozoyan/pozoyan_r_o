@@ -5,10 +5,10 @@
 
 //-----------------------------------------
 //============================================================= 
-double skalar_product(const Rdec2D& fst, const Rdec2D& scd) {
+double dot(const Rdec2D& fst, const Rdec2D& scd) {
 	return { fst.x * scd.x + fst.y * scd.y };
 }
-double vector_length(const Rdec2D& fst) {
+double norm(const Rdec2D& fst) {
 	return { sqrt(pow(fst.x, 2) + pow(fst.y, 2)) };
 }
 void polar_system(struct Rdec2D& pol) {
@@ -28,10 +28,10 @@ int main() {
 	std::cout << "vector z1:" << z1 << '\n';
 	std::cout << "vector z2:" << z2 << '\n';
 	std::cout << "------------------------------------------------------------" << '\n';
-	std::cout << "scalar product = " << skalar_product(z1, z2) << ";" << '\n';
+	std::cout << "scalar product = " << dot(z1, z2) << ";" << '\n';
 	std::cout << "------------------------------------------------------------" << '\n';
-	std::cout << "vector z1 length = " << vector_length(z1) << ";" << '\n';
-	std::cout << "vector z2 length = " << vector_length(z2) << ";" << '\n';
+	std::cout << "vector z1 length = " << norm(z1) << ";" << '\n';
+	std::cout << "vector z2 length = " << norm(z2) << ";" << '\n';
 	std::cout << "------------------------------------------------------------" << '\n';
 	std::cout << "multiplication by number: z1 * a = " << z1 * a << ";" << '\n';
 	std::cout << "multiplication by number: z2 * a = " << z2 * a << ";" << '\n';
