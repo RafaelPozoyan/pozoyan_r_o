@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main(){
+    double x , y;
+    std::cin >> x >> y;
+    if((1 >= x > 1/std::numbers::sqrt2 and 1 <= y < 1/std::numbers::sqrt2) or (1 <= x < 1/std::numbers::sqrt2 and 1 >= y > 1/std::numbers::sqrt2)){
+        std::cout << "YES";
+    }
+    else{
+        std::cout << "NO";
+    }
+}
