@@ -1,0 +1,20 @@
+/var/lib/snapd/snap/clion/222/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/222/bin/ninja/linux/x64/ninja -G Ninja -S /home/rafael/repos/pozoyan_r_o -B /home/rafael/repos/pozoyan_r_o/cmake-build-debug
+CMake Error at CMakeLists.txt:17 (find_package):
+  By not providing "Finddoctest.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "doctest", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "doctest" with any
+  of the following names:
+
+    doctestConfig.cmake
+    doctest-config.cmake
+
+  Add the installation prefix of "doctest" to CMAKE_PREFIX_PATH or set
+  "doctest_DIR" to a directory containing one of the above files.  If
+  "doctest" provides a separate development package or SDK, be sure it has
+  been installed.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/rafael/repos/pozoyan_r_o/cmake-build-debug/CMakeFiles/CMakeOutput.log".
