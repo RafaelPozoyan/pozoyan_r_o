@@ -1,0 +1,73 @@
+#include <iostream>
+
+class ArrayD{
+public:
+    ArrayD() = default;
+    ~ArrayD() = default;
+    ArrayD(const ArrayD&) = default;
+
+    explicit ArrayD(const std::ptrdiff_t);
+    ArrayD operator=(const ArrayD&);
+
+    double& operator[](const std::ptrdiff_t n);//доступ по индексу
+    const double& operator[](const std::ptrdiff_t n) const;
+
+    std::ptrdiff_t ssize() noexcept;//размер массива
+
+    void resize(const std::ptrdiff_t size);//изменение размеров массива
+
+    void insert(const std::ptrdiff_t n, const double val);//добавление элемента по индексу
+
+    void remove(const std::ptrdiff_t n);//удаление элемента по индексу
+private:
+    ptrdiff_t n = 0;
+    ptrdiff_t size_ = 0;
+    double* arr = nullptr;
+
+};
+
+double& ArrayD::operator[](const std::ptrdiff_t n){
+    return *(arr+n);
+}
+const double& ArrayD::operator[](const std::ptrdiff_t n) const{
+    return *(arr+n);
+}
+
+std::ptrdiff_t ArrayD::ssize() noexcept {
+    return size_;
+}
+
+void ArrayD::insert(const std::ptrdiff_t n, const double val){
+    double* narr = new double[size_+1];
+    for(int i = 0; i < n; i++) {
+        narr[i] = arr[i];
+    }
+    narr[n] = val;
+    for(int i = n+1; n < size_+1; i++) {
+        narr[i] = arr[i-1];
+    }
+    delete[] arr;
+    arr = narr;
+    size_ += 1;
+}
+
+void ArrayD::remove(const std::ptrdiff_t n) {
+    for(int i = n; i < size_; i++){
+        arr[i] = arr[i+1];
+    }
+    delete &arr[size_-1];
+    size_ -= 1;
+}
+
+void ArrayD::resize(const std::ptrdiff_t size){
+    if(size > size_){
+        double* narr = new double[size];
+        delete[] arr;
+    }
+    else{
+        for(int i = size_-1; i >= size; i--){
+            delete &arr[i];
+        }
+    }
+    size_ = size;
+}
